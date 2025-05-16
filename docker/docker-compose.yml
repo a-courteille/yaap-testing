@@ -1,0 +1,30 @@
+services:
+ node1:
+    build:
+      context: ./docker-node
+      dockerfile: Dockerfile.node
+    networks:
+      - ansible
+ node2:
+    build:
+      context: ./docker-node
+      dockerfile: Dockerfile.node
+    networks:
+      - ansible
+ node3:
+    build:
+      context: ./docker-node
+      dockerfile: Dockerfile.node
+    networks:
+      - ansible
+ node4:
+    build:
+      context: ./docker-node
+      dockerfile: Dockerfile.node
+    networks:
+      - ansible
+
+networks:
+  ansible:
+    name: ansible
+    external: true
